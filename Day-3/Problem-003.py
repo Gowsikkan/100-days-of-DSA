@@ -1,4 +1,5 @@
 #Kids With the Greatest Number of Candies
+
 class Solution:
     def kidsWithCandies(self, candies,extraCandies):
         c=list()
@@ -16,7 +17,7 @@ for i in range(n):
     e=int(input())
     candies.append(e)
 
-extraCandies = int(input("Extra"))
+extraCandies = int(input("Extra Candies : "))
 
 print(Solution().kidsWithCandies(candies,extraCandies))
 
