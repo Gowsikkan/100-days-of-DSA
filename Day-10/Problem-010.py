@@ -6,6 +6,6 @@ class Solution:
         return False
 
 target = [1,2,3,4] 
-arr = [2,1,4,3]
+array = [2,1,4,3]
 
-print(Solution().canBeEqual(target,arr))
+print(Solution().canBeEqual(target,array))
