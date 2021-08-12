@@ -5,7 +5,6 @@ class Solution:
             return True
         return False
 
-
 target = [1,2,3,4] 
 arr = [2,4,1,3]
 
