@@ -11,7 +11,7 @@ class Solution:
                 word_list.append(word)
         return word_list
 
-n=int(input("Enter size: "))
+n=int(input("Enter size : "))
 c=[]
 for i in range(n):
     s=input()
