@@ -24,4 +24,4 @@ s=[]
 for i in range(n):
     s.append(input())
 
-print("Sum : ",Solution().calPoints(s))
+print("Sum :",Solution().calPoints(s))
