@@ -25,8 +25,10 @@ if __name__ == '__main__':
     llist = Solution()
  
     llist.head = ListNode(1)
-    llist.head.next = ListNode(0)
-    llist.head.next.next = ListNode(1)
-    llist.head.next.next.next = ListNode(1)
+    llist.head.next = ListNode(2)
+    llist.head.next.next = ListNode(3)
+    llist.head.next.next.next = ListNode(4)
+    llist.head.next.next.next.next = ListNode(5)
+    
 
 print(Solution().getDecimalValue(llist.head))

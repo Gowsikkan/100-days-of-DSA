@@ -1,19 +1,25 @@
-#Convert Binary Number in a Linked List to Integer
-
+#Middle of the Linked List
 
 # Definition for singly-linked list.
 
 class Solution:
-    def getDecimalValue(self, head):
-        lst = []
+    def middleNode(self, head):
         temp=head
+        e=0
         while temp:
-            lst.append(str(temp.val))
+            e+=1
             temp=temp.next
-        s="".join(lst)
-        ans=int(s,2)
-        return ans
-        
+        mid=e//2
+        c=0
+        newtemp=head
+        while newtemp:
+            if mid==c:
+                s=newtemp
+            newtemp=newtemp.next
+            c+=1
+        while s:
+            print(s.val)
+            s=s.next
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -25,8 +31,10 @@ if __name__ == '__main__':
     llist = Solution()
  
     llist.head = ListNode(1)
-    llist.head.next = ListNode(0)
-    llist.head.next.next = ListNode(1)
-    llist.head.next.next.next = ListNode(1)
+    llist.head.next = ListNode(2)
+    llist.head.next.next = ListNode(3)
+    llist.head.next.next.next = ListNode(4)
+    llist.head.next.next.next.next = ListNode(5)
+    
 
-print(Solution().getDecimalValue(llist.head))
+c=Solution().middleNode(llist.head)
