@@ -1,18 +1,32 @@
-def twosum(num,target):
-    x=[]
-    for i in range(len(num)):
-        for j in range(len(num)):
-            if i!=j:
-                if num[i]+num[j]==target:
-                    x.append([i,j])
-        break
-    return x
+#Convert Binary Number in a Linked List to Integer
 
-a=int(input("enter the size of st2ring"))
-num=[]
-for i in range(a):
-    b=int(input("enter the value"))
-    num.append(b)
-target=int(input("enter the target num"))
-x=twosum(num,target)
-print(x)
+
+# Definition for singly-linked list.
+
+class Solution:
+    def getDecimalValue(self, head):
+        lst = []
+        temp=head
+        while temp:
+            lst.append(str(temp.val))
+            temp=temp.next
+        s="".join(lst)
+        ans=int(s,2)
+        return ans
+        
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+if __name__ == '__main__':
+ 
+    #Start with the empty list
+    llist = Solution()
+ 
+    llist.head = ListNode(1)
+    llist.head.next = ListNode(0)
+    llist.head.next.next = ListNode(1)
+    llist.head.next.next.next = ListNode(1)
+
+print(Solution().getDecimalValue(llist.head))
