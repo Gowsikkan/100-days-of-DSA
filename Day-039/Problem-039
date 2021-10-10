@@ -1,0 +1,32 @@
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def deleteNode(self, curr):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        while curr.next:
+            curr.val=curr.next.val
+            prev=curr
+            curr=curr.next
+        prev.next=None
+
+if __name__ == '__main__':
+ 
+    #Start with the empty list
+    llist = Solution()
+ 
+    llist.head = ListNode(1)
+    llist.head.next = ListNode(2)
+    llist.head.next.next = ListNode(3)
+    llist.head.next.next.next = ListNode(4)
+    llist.head.next.next.next.next = ListNode(5)
+    
+
+c=Solution().deleteNode(llist.head.next)
+print(llist.head.val,llist.head.next.val,llist.head.next.next.val,llist.head.next.next.next.val)
