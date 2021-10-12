@@ -1,0 +1,39 @@
+#Remove Linked List Elements
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def removeElements(self, head, val: int):
+        prev = None
+        curr = head
+        
+        while curr:
+            if curr.val != val:
+                prev = curr
+            else:
+                if prev:
+                    prev.next = curr.next
+                else:
+                    head = curr.next
+            curr = curr.next
+        return head
+                
+if __name__ == '__main__':
+ 
+    #Start with the empty list
+    llist = Solution()
+ 
+    llist.head = ListNode(1)
+    llist.head.next = ListNode(2)
+    llist.head.next.next = ListNode(3)
+    llist.head.next.next.next = ListNode(4)
+
+vl= 3
+
+c=Solution().removeElements(llist.head,vl)
+#print(c.head,c.next.val,c.next.next.val,c.next.next.next.val)
+print(c.val,c.next.val,c.next.next.val)

@@ -30,4 +30,4 @@ if __name__ == '__main__':
     
 
 c=Solution().reverseList(llist.head)
-print(c.val,c.next.val,c.next.next.val,c.next.next.next.val)
+print(c.val,c.next.val,c.next.next.val)
