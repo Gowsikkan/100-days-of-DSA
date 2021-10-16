@@ -7,16 +7,15 @@ class ListNode:
 class Solution:
     def hasCycle(self, head,pos):
         curr=head
-        c=0
-        d=0
+        c=[]
         while curr:
-            if c==pos:
-                d=curr
-            if curr.next==d:
+            if curr.next in c:
                 return True
-            curr=curr.next
-            c=c+1
+            else:
+                c.append(curr)
+                curr=curr.next
         return False
+            
             
 if __name__ == '__main__':
  
